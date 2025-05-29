@@ -1,0 +1,507 @@
+{
+	"info": {
+		"_postman_id": "fc7f2180-0d44-448a-807f-f5ae87ac2a66",
+		"name": "Aleris",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42565203"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "driver_register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "hamdaa",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "hamdaaa@example.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "0123456789",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "passenger",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password123456",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "password123456",
+											"type": "text"
+										},
+										{
+											"key": "car_model",
+											"value": "Toyota Corolla",
+											"type": "text"
+										},
+										{
+											"key": "plate_number",
+											"value": "ABC123",
+											"type": "text"
+										},
+										{
+											"key": "color",
+											"value": "Red",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2023",
+											"type": "text"
+										},
+										{
+											"key": "driver_license_number",
+											"value": "D12345678",
+											"type": "text"
+										},
+										{
+											"key": "insurance_valid_until",
+											"value": "2026-12-31",
+											"type": "text"
+										},
+										{
+											"key": "inspection_status",
+											"value": "Passed",
+											"type": "text"
+										},
+										{
+											"key": "driver_license_image",
+											"type": "file",
+											"src": "/Users/macbookair/Desktop/download.jpeg"
+										},
+										{
+											"key": "driver_id_image",
+											"type": "file",
+											"src": "/Users/macbookair/Desktop/download.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/auth/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "upadte",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "passgener_register",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "ride",
+					"item": [
+						{
+							"name": "calc_fare",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "passenger_id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "pickup_lat",
+											"value": "30.0444",
+											"type": "text"
+										},
+										{
+											"key": "pickup_lng",
+											"value": "31.2357",
+											"type": "text"
+										},
+										{
+											"key": "dest_lat",
+											"value": "30.0500,",
+											"type": "text"
+										},
+										{
+											"key": "dest_lng",
+											"value": "31.2333",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/ride-requests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"ride-requests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show_id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "status",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "ride",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "messages",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "chat_id",
+											"value": "f27b85f9-a55d-40b1-a1d9-af4e6b64b317",
+											"type": "text"
+										},
+										{
+											"key": "ride_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "Hello from Postman",
+											"type": "text"
+										},
+										{
+											"key": "sent_at",
+											"value": "2025-05-21T23:55:00Z",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/auth/chats/messages",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"chats",
+										"messages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findnearset",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "driver_rating",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "reports",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "ride_request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "14|LyRR6mywGoefSBFVvL15sI9fVPmDpQSmGiFQcvBI9029247b",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "live",
+			"item": [
+				{
+					"name": "live location",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "test destance",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "live stream",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "trigger",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "11|KhOTX1rY6eW7fZQZmTovjn9oFNBmUeHoiciPdU2l020b5339",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
